@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>Pagina de ventas</title>
+        <link rel="stylesheet" type="text/css" href="Style.css">
+    </head>
+    <body>
+        <h1 class="Tlo"><a href="/paginaVentas">Titulo</a></h1>
+        <button class="boton"><a href="/iniciarSesion">Iniciar sesion</a></button>
+        <button class="boton"><a href="/catalogo">Catalogo</a></button>
+        <form action="registrar" method="POST">
+            
+            <p th:if="${error != null}" th:text="${error}"></p>
+            
+        <li>Nombre de usuario</li><input type="text" required name="nombre" th:value="${nombre}">
+        <li>Contrasena</li><input type="password" required name="clave">
+        <li>Reingresar contrasena</li><input type="password" required name="clave1"> 
+        <li>Nombre y apellido</li> <input type="text" required name="nombreApellido"th:value="${nombreApellido}">           
+        <li>Email</li><input type="email" required name="mail"th:value="${mail}">
+        <br><br>
+        <input type="submit">
+        <input type="reset">
+        </form>   
+    </body>
+</html>

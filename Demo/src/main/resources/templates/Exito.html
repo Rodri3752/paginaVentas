@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>Pagina de ventas</title>
+        <link rel="stylesheet" type="text/css" href="Style.css">
+    </head>
+    <body>
+        <h1 class="Tlo"><a href="/paginaVentas">Titulo</a></h1>
+        <button class="boton"><a href="/iniciarSesion">Iniciar sesion</a></button>
+        <button class="boton"><a href="/catalogo">Catalogo</a></button>
+        <br>
+        <h2 th:text="${titulo}"></h2>
+        <p th:text="${descripcion}"></p>
+    </body>
+</html>
